@@ -14,14 +14,14 @@ module.exports = {
   devServer: {
     proxy: {
       '/api': {
-        target: process.env.KITSU_API_TARGET || 'http://localhost:5000',
+        target: process.env.KITSU_API_TARGET || 'http://47.104.136.30',
         changeOrigin: true,
         pathRewrite: {
           '^/api': ''
         }
       },
       '/socket.io': {
-        target: process.env.KITSU_EVENT_TARGET || 'http://127.0.0.1:5001',
+        target: process.env.KITSU_EVENT_TARGET || 'http://47.104.136.30',
         ws: true
       }
     }

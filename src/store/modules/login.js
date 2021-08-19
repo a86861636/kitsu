@@ -16,8 +16,8 @@ import {
 import auth from '../../lib/auth'
 
 const initialState = {
-  email: '',
-  password: '',
+  email: 'admin@example.com',
+  password: 'mysecretpassword',
   isLdap: false,
   isLoginLoading: false,
   isLoginError: false,
