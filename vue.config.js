@@ -17,7 +17,7 @@ module.exports = {
         target: process.env.KITSU_API_TARGET || 'http://47.104.136.30',
         changeOrigin: true,
         pathRewrite: {
-          '^/api': ''
+          '^/api': '/api'
         }
       },
       '/socket.io': {

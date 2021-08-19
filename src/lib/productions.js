@@ -14,9 +14,14 @@ export const PRODUCTION_TYPE_OPTIONS = [
 ]
 
 export function getTaskTypePriorityOfProd (taskType, production) {
-  if (production && production.task_types_priority[taskType.id]) {
+  if (production && production.task_types_priority && production.task_types_priority[taskType.id]) {
     return production.task_types_priority[taskType.id]
   } else {
     return taskType.priority
   }
+  // if (production && production.task_types_priority[taskType.id]) {
+  //   return production.task_types_priority[taskType.id]
+  // } else {
+  //   return taskType.priority
+  // }
 }
